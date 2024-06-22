@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="full.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h2 id="title">단리 이자계산기</h2>
+      </header>
+      <div id="content">
+        <button id="bt">&#9654;</button>
+        <div id="sidebar" class="sidebar">
+          <ul>
+            <li>
+              <a id="sd" href="index.html">계산기</a>
+            </li>
+            <li>
+              <a id="sd">단리이자계산기</a>
+            </li>
+            <li>
+              <a id="sd" href="ebok_calc.html">복리이자계산기</a>
+            </li>
+          </ul>
+        </div>
+        <div id="main">
+          <form id="interestForm" onsubmit="calculateSimpleInterest(event)">
+            <label for="money">원금 (₩):</label>
+            <input type="number" id="money" required />
+
+            <label for="rate">이자율 (%):</label>
+            <input type="number" id="rate" step="0.01" required />
+
+            <label for="time">기간 (Years):</label>
+            <input type="number" id="time" required />
+
+            <button type="submit">계산하기</button>
+
+            <div id="result"></div>
+          </form>
+
+        </div>
+      </div>
+      <footer>
+        <p id="maker">202210645 조민기</p>
+      </footer>
+    </div>
+    <script src="dan_calc.js"></script>
+  </body>
+</html>
